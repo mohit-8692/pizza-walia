@@ -1,11 +1,12 @@
 import Footer from './Footer'
 import Navbar from "./Navbar"
+import React from 'react'
 
-function Layout({childern}) {
+function Layout({children}) {
   return (
     <>
     <Navbar/>
-     <main>{childern}</main>
+     <main>{children}</main>
     <Footer/>
     </>  
   )

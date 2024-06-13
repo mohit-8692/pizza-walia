@@ -1,6 +1,9 @@
 import Image from "next/image";
+// import useTheme from "next-theme/dist/useTheme";
 import Link from "next/link";
+// import {useTheme} from "next-themes"
 const Navbar = () => {
+    // const {theme,setTheme} = useTheme()
   return (
     <header className="text-white-100 stickey top-0 z-50 bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700 body-font">
         <div className='container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center'>
@@ -28,6 +31,10 @@ const Navbar = () => {
                     <Image src={'/signup-64.png'} height={40} width={40}/>
                 </Link>
             </nav>
+
+            {/* <button onClick={()=>setTheme(theme==="dark"?"light":"dark")} className="text-white bg-black rounded-full p-1 dark:text-black dark:bg-white flex items-center ">
+                Dark/Light
+            </button> */}
         </div>
     </header>
   )
