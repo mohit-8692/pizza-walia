@@ -1,10 +1,13 @@
 import Image from "next/image";
 // import useTheme from "next-theme/dist/useTheme";
 import Link from "next/link";
+import {CartContext} from "@/utils/ContextReducer"
+import { useContext } from "react";
 // import {useTheme} from "next-themes"
 const Navbar = () => {
     // const {theme,setTheme} = useTheme()
-  return (
+    const {state} = useContext(CartContext)
+    return (
     <header className="text-white-100 stickey top-0 z-50 bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700 body-font">
         <div className='container mx-auto flex flex-wrap p-3 flex-col md:flex-row items-center'>
             <Link href={"/"}
@@ -17,6 +20,10 @@ const Navbar = () => {
                 <Link href={"/cart"} className="text-white mr-5 cursor-pointer hover:text-gray-200 flex items-center">
                     Cart
                     <Image src={'/cart-40.png'} height={40} width={40}/>
+                    
+                    <span className="inline-flex items-center bg-red-50 py-1 px-2 rounded-full text-xs font-medium text-red-600 ring-1 shadow-[0_0_15px_1px_rgba(220,38,38)]  ring-inset ring-red-600/10">
+                    {state.length}
+                    </span>
                 </Link>
                 <Link href={"/order"} className="text-white mr-5 cursor-pointer hover:text-gray-200 flex items-center">
                     My Orders
