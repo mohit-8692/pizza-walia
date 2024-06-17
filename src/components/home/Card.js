@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { CartContext } from '@/utils/ContextReducer';
 
 // const priceOptions = ['regular', 'medium', 'large'];
@@ -20,15 +21,15 @@ function Card(props) {
   const handleAddToCart=async()=>{
 
     const updateItem = await state.find(
-      (item) =>item.tempId === data.id +size
+      (item) =>item.tempId === data["_id"] +size
     );
     
     if(!updateItem)
       {
           dispatch({
             type:"ADD",
-            id:data.id,
-            tempId: data.id+size,
+            id:data["_id"],
+            tempId: data["_id"]+size,
             name:data.name,
             price:finalPrice,
             qty:qty,
@@ -40,20 +41,20 @@ function Card(props) {
         {
           dispatch({
             type:"UPDATE",
-            tempId: data.id+size,
+            tempId: data["_id"]+size,
             price:finalPrice,
             qty:qty,
           }
         )
         }
-
       }
-
   let finalPrice = qty * parseInt(data.price[size]);
   
   return (
     <div className="box">
       <div className="w-80 rounded-lg dark:bg-black border-gradient">
+      <Link href={{ pathname: "/Item/[item]" }} as={`Item/${data["_id"]}`}>
+
         <div className="relative w-full h-80">
           <Image
             src={data.img} // Specify a valid image path
@@ -62,7 +63,6 @@ function Card(props) {
             alt="pizza"
           />
         </div>
-
         <div className="p-4">
           <div className="font-bold mb-2 text-xl uppercase">{data.name}</div>
           <p className="">
@@ -95,11 +95,12 @@ function Card(props) {
             })}
           </select>
         </div>
-
         <div className='flex p-4 font-bold justify-between'>
             <button className="border font-bold  rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700 hover:text-gray-400" onClick={handleAddToCart}>Add to cart</button>
             <p className='p-2 text-xl'>₹ {finalPrice}/-</p>
         </div>
+
+        </Link>
       </div>
     </div>
   );

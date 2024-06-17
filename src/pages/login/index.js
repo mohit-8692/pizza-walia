@@ -20,21 +20,21 @@ const [credentials,setCredentials] = useState({email:"",password:""});
       <div className='container w-full max-w-md'>
         <form action="" 
         onSubmit={handleSubmit}
-        className='bg-gray-100 dark:bg-gray-900 dark:text-gray-100 border-gradient rounded-lg shadow-2xl px-8 pt-6 pb-8 mb-4'>
+        className='bg-gray-100   border-gradient rounded-lg shadow-2xl px-8 pt-6 pb-8 mb-4'>
           <div className='mb-4'>
             <label htmlFor="email"
-            className='block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2'>
+            className='block text-gray-700  text-sm font-bold mb-2'>
               Username
             </label>
-            <input type="text" name='email' placeholder="Enter username" className='shadow appearance-border border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700 dark:text-gray-100 leading-tight focus:outline-none bg-gray-700' value={credentials.email} onChange={handleChange} />
+            <input type="text" name='email' placeholder="Enter username" className='shadow appearance-border border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-black leading-tight focus:outline-none ' value={credentials.email} onChange={handleChange} />
           </div>
 
           <div className='mb-4'>
             <label htmlFor="password"
-            className='block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2'>
+            className='block text-gray-700  text-sm font-bold mb-2'>
               Password
             </label>
-            <input type="password" placeholder="Enter password" name='password' className='shadow appearance-border border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700 dark:text-gray-100 leading-tight focus:outline-none bg-gray-700' value={credentials.password} onChange={handleChange}/>
+            <input type="password" placeholder="Enter password" name='password' className='shadow appearance-border border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-black leading-tight focus:outline-none bg-black-700' value={credentials.password} onChange={handleChange}/>
           </div>
           
           <div className="flex justify-between items-center">
