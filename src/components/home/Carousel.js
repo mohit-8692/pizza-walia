@@ -7,11 +7,11 @@ function CarouselComponent() {
   return (
     <Carousel autoPlay infiniteLoop showStatus={false} emulateTouch showThumbs={false} navButtonsAlwaysVisible>
       
-          <div style={{ maxHeight: '24rem' }} className="object-center brightness-50">
+          <div style={{ maxHeight: '24rem' }} className="object-center ">
             <img src={"/magrita.jpg"}  />
           </div>
-          <div style={{ maxHeight: '24rem' }} className="object-center brightness-50 object-fit">
-            <img src={"/coke.jpg"}  />
+          <div style={{ maxHeight: '24rem' }} className="object-fill">
+            <img src={"/cr-img-3.jpg"}  />
           </div>
     </Carousel>
   );

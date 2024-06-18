@@ -2,9 +2,9 @@ import Card from "@/components/home/Card";
 import CarouselComponent from "@/components/home/Carousel";
 import { Inter } from "next/font/google";
 // import cardData from "../store/cardData.json";
-import { useEffect, useState } from "react";
 import { baseUrl } from "@/utils/baseURL";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ data }) {
@@ -34,16 +34,16 @@ export default function Home({ data }) {
       <div className="container mx-auto">
         <div className="my-6 space-x-5">
           <button
-            className={`border-black rounded-full dark:border-white border-2 py-1 px-3 ${
-              !typeFilter && "bg-slate-300 dark:bg-slate-600"
+            className={`border-gradient rounded-full border-black border-2 py-1 px-3 ${
+              !typeFilter && "bg-slate-900 "
             } `}
             onClick={() => setTypeFilter(false)}
           >
             All
           </button>
           <button
-            className={`border-black rounded-full dark:border-white border-2 py-1 px-3 ${
-              typeFilter === "Veg" && "bg-slate-300 dark:bg-slate-600"
+            className={`border-gradient rounded-full border-black  border-2 py-1 px-3 ${
+              typeFilter === "Veg" && "bg-slate-900"
             } `}
             onClick={() => {
               setTypeFilter("Veg");
@@ -59,8 +59,8 @@ export default function Home({ data }) {
             Veg
           </button>
           <button
-            className={`border-black rounded-full dark:border-white border-2 py-1 px-3 ${
-              typeFilter === "Non-Veg" && "bg-slate-300 dark:bg-slate-600"
+            className={`border-gradient rounded-full border-black border-2 py-1 px-3 ${
+              typeFilter === "Non-Veg" && "bg-slate-900"
             } `}
             onClick={() => {
               setTypeFilter("Non-Veg");

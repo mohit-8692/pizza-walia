@@ -1,7 +1,7 @@
 import { CartContext } from "@/utils/ContextReducer";
 import { useRouter } from "next/router";
 
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 
 function Cart() {
   const { state, dispatch } = useContext(CartContext);
@@ -14,6 +14,7 @@ function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     console.log(localStorage.getItem("userEmail"));
+    console.log(userEmail)
     if (
       localStorage.getItem("userEmail") === null ||
       localStorage.getItem("userEmail") === undefined
@@ -31,6 +32,7 @@ function Cart() {
           order_date: new Date().toDateString(),
         }),
       }).then((response) => {
+        console.log(response)
         if (response.status === 200) {
           dispatch({ type: "DROP" });
           setSuccess(true);

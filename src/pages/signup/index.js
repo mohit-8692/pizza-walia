@@ -9,7 +9,6 @@ function Signup() {
     email: "",
     password: "",
     geolocation: "",
-    MobNumber:"",
   });
 
   const handleSubmit = async (e) => {
@@ -25,7 +24,6 @@ function Signup() {
         email: credentials.email,
         password: credentials.password,
         location: credentials.geolocation,
-        MobNumber: credentials.MobNumber
       }),
     });
     const res = await response.json();
@@ -48,20 +46,20 @@ function Signup() {
       style={{
         height: "90vh",
         backgroundImage:
-          'url("https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-        backgroundSize: "cover",
+          'url("https://st.depositphotos.com/1003814/5052/i/450/depositphotos_50523105-stock-photo-pizza-with-tomatoes.jpg")',
+        backgroundSize: "object-fit",
       }}
       className="flex justify-center items-center"
     >
       <div className="container w-full max-w-md">
         <form
           onSubmit={handleSubmit}
-          className="bg-gray-100 border-gradient rounded-lg shadow-2xl px-8 pt-6 pb-8 mb-4"
+          className="bg-black border-gradient rounded-lg shadow-2xl px-8 pt-6 pb-8 mb-4"
         >
           <div className="mb-4">
             <label
               htmlFor="name"
-              className="block text-gray-700  text-sm font-bold mb-2"
+              className="block  text-sm font-bold mb-2"
             >
               Name
             </label>
@@ -71,14 +69,14 @@ function Signup() {
               onChange={handleChange}
               type="text"
               required
-              className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border text-black border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 ark:text-gray-100  leading-tight focus:outline-none focus:shadow-outline"
               value={credentials.name}
             />
           </div>
           <div className="mb-4">
             <label
               htmlFor="email"
-              className="block text-gray-700  dark:text-gray-300 text-sm font-bold mb-2"
+              className="block  text-sm font-bold mb-2"
             >
               Email
             </label>
@@ -88,14 +86,14 @@ function Signup() {
               onChange={handleChange}
               type="email"
               required
-              className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border text-black border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 ark:text-gray-100  leading-tight focus:outline-none focus:shadow-outline"
               value={credentials.email}
             />
           </div>
           <div className="mb-4">
             <label
               htmlFor="password"
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-sm font-bold mb-2"
             >
               Password
             </label>
@@ -105,14 +103,14 @@ function Signup() {
               name="password"
               required
               type="password"
-              className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none text-black border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 ark:text-gray-100  leading-tight focus:outline-none focus:shadow-outline"
               value={credentials.password}
             />
           </div>
           <div className="mb-4">
             <label
               htmlFor="geolocation"
-              className="block text-gray-700  text-sm font-bold mb-2"
+              className="block  text-sm font-bold mb-2"
             >
               Address
             </label>
@@ -122,37 +120,19 @@ function Signup() {
               name="geolocation"
               required
               type="text"
-              className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none text-black border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 ark:text-gray-100  leading-tight focus:outline-none focus:shadow-outline"
               value={credentials.geolocation}
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="MobNumber"
-              className="block text-gray-700  text-sm font-bold mb-2"
-            >
-              Phone Number
-            </label>
-            <input
-              placeholder="Enter your mobile  number"
-              onChange={handleChange}
-              name="MobNumber"
-              required
-              type="number"
-              className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
-              value={credentials.MobNumber}
             />
           </div>
           <div className="flex items-center justify-between"></div>
           <button
             type="submit"
-            className="border font-bold text-gray-900  border-gray-900 rounded p-2 mr-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700  hover:text-gray-100"
+            className="border-gradient text-white font-bold border-gray-900 rounded p-2 mr-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700  hover:text-gray-100"
           >
             Signup
           </button>
           <Link href={"/login"} style={{ all: "unset" }}>
-            <button className="border text-gray-900 font-bold  border-gray-900 rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700  hover:text-gray-100">
+            <button className="border-gradient font-bold border-gray-900 rounded mr-2 p-2 hover:bg-gradient-to-r from-indigo-700 via-violet-700 to-orange-700  hover:text-gray-100">
               Already a user?
             </button>
           </Link>

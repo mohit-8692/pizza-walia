@@ -1,4 +1,3 @@
-
 import PizzaData from "@/models/PizzaData";
 import db from "@/utils/db";
 

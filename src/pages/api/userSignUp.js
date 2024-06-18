@@ -18,7 +18,6 @@ export default async function handler(req, res) {
         password: securePass,
         email: req.body.email,
         location: req.body.location,
-        MobNumber:req.body.MobNumber,
       })
         .then(async (user) => {
           const data = {

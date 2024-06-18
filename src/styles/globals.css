@@ -99,3 +99,15 @@ body {
     text-wrap: balance;
   }
 }
+.img-container {
+  overflow: hidden;
+  position: relative;
+  max-height: 24rem;
+}
+
+.responsive-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Ensures there are no extra spaces (e.g., margin) around the image */
+}
