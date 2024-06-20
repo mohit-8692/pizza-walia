@@ -84,7 +84,7 @@ function Admin() {
                   onChange={handleChange}
                   type="text"
                   required
-                  className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700   leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-black leading-tight focus:outline-none focus:shadow-outline"
                   value={foodData.name}
                 />
               </div>
@@ -102,7 +102,7 @@ function Admin() {
                   type="foodCategory"
                   required
                   style={{ "-webkit-appearance": "auto" }}
-                  className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700   leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border text-black border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700   leading-tight focus:outline-none focus:shadow-outline"
                   value={foodData.foodCategory}
                 >
                   <option value="">Select Food Category</option>
@@ -122,7 +122,7 @@ function Admin() {
                   name="foodType"
                   required
                   style={{ "-webkit-appearance": "auto" }}
-                  className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700   leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border text-black border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700   leading-tight focus:outline-none focus:shadow-outline"
                   value={foodData.foodType}
                 >
                   <option value="">Select food type</option>
@@ -164,7 +164,7 @@ function Admin() {
                                 },
                               });
                             }}
-                            className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700   leading-tight focus:outline-none focus:shadow-outline"
+                            className="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 focus:border-indigo-700 text-black  leading-tight focus:outline-none focus:shadow-outline"
                           />
                         </div>
                       );
@@ -217,7 +217,7 @@ function Admin() {
           </div>
         </div>
       {/* ) : (
-        <Custom404 /> */}
+        <Custom404 /> 
       {/* ) */}
       {/* } */}
     </>
